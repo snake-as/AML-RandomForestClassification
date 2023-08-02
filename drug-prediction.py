@@ -78,11 +78,11 @@ def predict_labels(model, test_data, drug_label_mapping):
         return None
 
 if __name__ == "__main__":
-    training_data_path = "data.xlsx"
+    training_data_path = "train-set.xlsx" # The training data-set as is saved on my file
     training_data = load_data(training_data_path)
 
-    test_data_path = "new_patient_data.xlsx"
-    test_data = load_data(test_data_path)
+    test_data_path = "test-set.xlsx" # The test data-set as is saved on my file
+    test_data = load_data(test_data_path) 
 
     if training_data is not None and test_data is not None:
         drug_label_mapping = get_drug_label_mapping(training_data)
