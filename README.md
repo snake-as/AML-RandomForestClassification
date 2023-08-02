@@ -8,6 +8,8 @@ test-set : [ 'LabId',	'ageAtDiagnosis',	'isRelapse'	,'isDenovo'	,'isTransformed'
 If anyone of  you want to add more columns that may he or she thinks that are more significal than these , simply edit the training and testing sets and add them into the code
 I am attaching with name [ drug-prediction.py ] .
 
+At the end of prediction I add a plot showing which drug is used the most
+and after that , how many times exactly the drugs are used.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
                                                            CODE IMPLEMENTATIONS DETAILS
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
