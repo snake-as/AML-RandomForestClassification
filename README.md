@@ -58,3 +58,10 @@ and after that , how many times exactly the drugs are used.
 ## Throughout the code, we handle potential errors and print appropriate error messages to provide better feedback during data loading, preprocessing, model training, and prediction stages.
 
 ## The goal of this code is to load the training and test data, preprocess it, train a RandomForestClassifier on the training data, and then use this trained model to make predictions on the test data. The predictions are then converted back to the drug names for better interpretability.
+
+Some ScreenShots:
+------------------
+![image](https://github.com/snake-as/AML-RandomForestClassification/assets/73217607/397ee7ed-9b16-49b0-9085-14f61014020d)
+
+![image](https://github.com/snake-as/AML-RandomForestClassification/assets/73217607/5b1bc0ae-e6c5-4ea8-b89c-f48770615059)
+
