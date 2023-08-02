@@ -6,6 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+# Function to load data from an Excel file
 def load_data(file_path):
     try:
         data = pd.read_excel(file_path, engine='openpyxl')
@@ -14,6 +15,7 @@ def load_data(file_path):
         print(f"Error occurred while loading data: {e}")
         return None
 
+# Function to preprocess data (drop missing values and convert non-numeric columns to numeric)
 def preprocess_data(data):
     try:
         data = data.dropna()
@@ -28,6 +30,7 @@ def preprocess_data(data):
         print(f"Error occurred during data preprocessing: {e}")
         return None
 
+# Function to train the RandomForestClassifier model
 def train_model(train_data):
     try:
         X = train_data.drop('drug_label', axis=1)
@@ -48,6 +51,7 @@ def train_model(train_data):
         print(f"Error occurred during model training: {e}")
         return None
 
+# Function to create a mapping between drug labels and their numeric representation
 def get_drug_label_mapping(data):
     try:
         label_encoder = LabelEncoder()
@@ -61,6 +65,7 @@ def get_drug_label_mapping(data):
         print(f"Error occurred during mapping creation: {e}")
         return None
 
+# Function to predict drug labels from the test data using the trained model
 def predict_labels(model, test_data, drug_label_mapping):
     try:
         test_data_processed = preprocess_data(test_data)
@@ -78,10 +83,10 @@ def predict_labels(model, test_data, drug_label_mapping):
         return None
 
 if __name__ == "__main__":
-    training_data_path = "train-set.xlsx" # The training data-set as is saved on my file
+    training_data_path = "train-set.xlsx" # The path to the training data file
     training_data = load_data(training_data_path)
 
-    test_data_path = "test-set.xlsx" # The test data-set as is saved on my file
+    test_data_path = "test-set.xlsx" # The path to the test data file
     test_data = load_data(test_data_path) 
 
     if training_data is not None and test_data is not None:
