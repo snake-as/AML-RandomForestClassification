@@ -2,13 +2,14 @@ I have created one script for drug prediction using as input  some important col
 After that I created one test-set without mentioning the expected column that we want to predicti. the  column ' drug_labels '
 
 train-set:  [ 'LabId',	'ageAtDiagnosis',	'isRelapse'	,'isDenovo'	,'isTransformed', 'dxAtInclusion', 'specificDxAtInclusion',	'cumulativeTreatmentTypes',	'drug_label' ] 
+
 test-set : [ 'LabId',	'ageAtDiagnosis',	'isRelapse'	,'isDenovo'	,'isTransformed', 'dxAtInclusion', 'specificDxAtInclusion',	'cumulativeTreatmentTypes' ] 
 
 If anyone of  you want to add more columns that may he or she thinks that are more significal than these , simply edit the training and testing sets and add them into the code
 I am attaching with name [ drug-prediction.py ] .
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-|                                                                                          CODE IMPLEMENTATIONS DETAILS
+                                                           CODE IMPLEMENTATIONS DETAILS
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1. Import Required Libraries:
